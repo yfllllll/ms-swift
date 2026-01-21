@@ -776,7 +776,7 @@ def load_labelme_folder(dataset_syntax, dataset_meta, **kwargs):
                 data = json.load(f)  
                 # 处理图像路径  
                 if 'imagePath' in data and not os.path.isabs(data['imagePath']):  
-                    data['imagePath'] = os.path.join(dataset_path, data['imagePath'])  
+                    data['imagePath'] = os.path.join(dataset_path, os.path.basename(data['imagePath']))  
                     print(f"Resolved image path: {data['imagePath']}")
                 
                 # 统计VQA数据
