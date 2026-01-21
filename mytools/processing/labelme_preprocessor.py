@@ -847,14 +847,14 @@ def load_labelme_folder(dataset_syntax, dataset_meta, **kwargs):
 # 6. 注册数据集  
 register_dataset(  
     DatasetMeta(  
-        dataset_path='/mnt/data/lyf/datasets/1431_part1/labelme',  
+        dataset_path='/mnt/disk/lyf/datasets/1431_part1/labelme',  
         dataset_name = "labelme_dataset1",
         preprocess_func=LabelMeGroundingPreprocessor(
             task_ratio=(0.5, 0.5, 0.0, 0.0, 0.0),  # grounding, region_caption, image_caption, vqa, bbox_vqa
             max_categories=8,
             negative_sample_prob=0.3,  # 30%的概率添加负样本
             max_negative_categories=3,  # 最多3个负样本类别
-            dataset_path='/mnt/data/lyf/datasets/1431_part1/labelme',  # 传递数据集路径
+            dataset_path='/mnt/disk/lyf/datasets/1431_part1/labelme',  # 传递数据集路径
             use_random_prompts=True,  # 使用随机提示词
             prompt_language='mixed',  # 使用混合语言提示词
             vqa_mode='mixed',  # 混合VQA模式
@@ -867,14 +867,14 @@ register_dataset(
 
 register_dataset(  
     DatasetMeta(  
-        dataset_path='/mnt/disk/lyf/datasets/important/needed/labelme_train',  
+        dataset_path='/mnt/disk/lyf/datasets/needed/labelme_train',  
         dataset_name = "labelme_dataset2",
         preprocess_func=LabelMeGroundingPreprocessor(
             task_ratio=(0.5, 0.5, 0.0, 0.0, 0.0),  # grounding, region_caption, image_caption, vqa, bbox_vqa
             max_categories=8,
             negative_sample_prob=0.3,  # 30%的概率添加负样本
             max_negative_categories=3,  # 最多3个负样本类别
-            dataset_path='/mnt/disk/lyf/datasets/important/needed/labelme_train',  # 传递数据集路径
+            dataset_path='/mnt/disk/lyf/datasets/needed/labelme_train',  # 传递数据集路径
             use_random_prompts=True,  # 使用随机提示词
             prompt_language='mixed',  # 使用混合语言提示词
             vqa_mode='mixed',  # 混合VQA模式

@@ -2,7 +2,7 @@ export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 NPROC_PER_NODE=2 \
 CUDA_VISIBLE_DEVICES=6,7 \
 swift sft \
-    --model /mnt/data/lyf/IDEA-Research/Rex-Omni \
+    --model /mnt/disk/lyf/IDEA-Research/Rex-Omni \
     --model_type qwen2_5_vl \
     --dataset labelme_dataset1 labelme_dataset2 vqa_dataset vqa_dataset2 image_caption_dataset, objvqa_dataset,objvqa_dataset1,objvqa_dataset2 \
     --custom_register_path mytools/processing/labelme_preprocessor.py \
